@@ -17,18 +17,11 @@ const formDataInit = {
 const tags = [];
 const API_BASE_URI = "http://localhostt:3000/";
 
-function fetchPosts() {
-  axios
-    .get(`${API_BASE_URI}posts`)
-    .then((res) => {
-      console.log("res:", res);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-}
-
 export default function Main() {
+  useEffect(() => {
+    fetchPosts();
+  }, []);
+
   const [publishedPosts, setPublishedPosts] = useState(posts);
 
   function fetchPosts() {
@@ -36,6 +29,8 @@ export default function Main() {
       .get(`${API_BASE_URI}posts`)
       .then((res) => {
         console.log("res:", res);
+        setPublishedPosts(res.data);
+        console.log(publishedPosts);
       })
       .catch((err) => {
         console.error(err);

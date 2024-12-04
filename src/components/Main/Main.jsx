@@ -85,6 +85,13 @@ export default function Main() {
     };
     console.log(post);
 
+    axios
+      .post(`${API_BASE_URI}posts`, post)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.err(err));
+
     setPublishedPosts([...publishedPosts, post]);
     setFormData(formDataInit);
     console.log(publishedPosts);

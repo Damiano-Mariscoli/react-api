@@ -1,0 +1,29 @@
+.section {
+	padding: 100px 0;
+}
+
+.section_title {
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.tags_centered {
+	justify-content: center;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0; 
+  }
+  
+  li {
+	margin-bottom: 10px; 
+  }
+  
+  label {
+	cursor: pointer; 
+	display: flex; 
+	align-items: center; 
+  }

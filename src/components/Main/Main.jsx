@@ -15,7 +15,8 @@ const formDataInit = {
   tags: [],
 };
 const tags = [];
-export const API_BASE_URI = "http://localhostt:3000/";
+const API_BASE_URI = "http://localhostt:3000/";
+export const API_BASE_URI_IMAGES = "http://localhostt:3000/images/";
 
 export default function Main() {
   useEffect(() => {
